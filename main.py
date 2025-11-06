@@ -4,22 +4,20 @@ from datetime import datetime
 
 
 class CSV:
-    # Crear una variable de clase
-    CSV_FILE = "finance_data.csv"
+    """Una clase para manejar las operaciones del archivo CSV de finanzas"""
 
-    # Crear un método de clase para manejar la generación del csv.
+    CSV_FILE = "finance_personal_tracker.csv"
+    COLUMNS = ["fecha", "monto", "categoria", "descripcion"]
+
     @classmethod
     def initialize_csv(cls):
-        # Si existe lo cargamos.
+        """Verifica si el archvio CSV existe. Si no, lo crea con las cabeceras definidas en cls.Columns"""
         try:
             pd.read_csv(cls.CSV_FILE)
-            # Crear el data frame si no existe.
         except FileNotFoundError:
-            df = pd.DataFrame(
-                columns=["Fecha", "Cantidad", "Categoría", "Descripcción"]
-            )
-            # Guardar el dataframe recién creado.
+            df = pd.DataFrame(columns=cls.COLUMNS)
             df.to_csv(cls.CSV_FILE, index=False)
+            print("Creado el archivo de forma correcta.")
 
 
-datos = CSV.initialize_csv()
+CSV.initialize_csv()
