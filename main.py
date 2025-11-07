@@ -11,7 +11,6 @@ class CSV:
     def crear_csv_inicial(cls):
         try:
             df = pd.read_csv(cls.CSV_FILE)
-            print("📈 Finanzas personales: ")
         except FileNotFoundError:
             df = pd.DataFrame(columns=cls.COLUMNS)
             df.to_csv(cls.CSV_FILE, index=False)
