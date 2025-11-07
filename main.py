@@ -4,35 +4,19 @@ from datetime import datetime
 
 
 class CSV:
-    """Una clase para manejar las operaciones del archivo CSV de finanzas"""
-
-    CSV_FILE = "finance_personal_tracker.csv"
-    COLUMNS = ["fecha", "monto", "categoria", "descripcion"]
+    CSV_FILE = "finanzas_personales.csv"
+    COLUMNS = ["fecha", "cantidad", "clasificacion", "descripcion"]
 
     @classmethod
-    def initialize_csv(cls):
-        """Verifica si el archvio CSV existe. Si no, lo crea con las cabeceras definidas en cls.Columns"""
+    def crear_csv_inicial(cls):
         try:
-            pd.read_csv(cls.CSV_FILE)
+            df = pd.read_csv(cls.CSV_FILE)
+            print("📈 Finanzas personales: ")
+            print(df.to_string())
         except FileNotFoundError:
             df = pd.DataFrame(columns=cls.COLUMNS)
             df.to_csv(cls.CSV_FILE, index=False)
-            print("Creado el archivo de forma correcta.")
-
-    @classmethod
-    def add_entry(cls, fecha, monto, categoria, descripcion):
-        new_entry = {
-            "fecha": fecha,
-            "monto": monto,
-            "categoria": categoria,
-            "descripcion": descripcion,
-        }
-
-        with open(cls.CSV_FILE, "a", newline="") as csvfile:
-            writer = csv.DictWriter(csvfile, fieldnames=cls.COLUMNS)
-            writer.writerow(new_entry)
-
-        print("Entrada guardada correctamente.")
+            print("🗒️ Archivo creado con éxito.")
 
 
-CSV.initialize_csv()
+CSV.crear_csv_inicial()
