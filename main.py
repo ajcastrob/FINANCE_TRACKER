@@ -19,5 +19,20 @@ class CSV:
             df.to_csv(cls.CSV_FILE, index=False)
             print("Creado el archivo de forma correcta.")
 
+    @classmethod
+    def add_entry(cls, fecha, monto, categoria, descripcion):
+        new_entry = {
+            "fecha": fecha,
+            "monto": monto,
+            "categoria": categoria,
+            "descripcion": descripcion,
+        }
+
+        with open(cls.CSV_FILE, "a", newline="") as csvfile:
+            writer = csv.DictWriter(csvfile, fieldnames=cls.COLUMNS)
+            writer.writerow(new_entry)
+
+        print("Entrada guardada correctamente.")
+
 
 CSV.initialize_csv()
