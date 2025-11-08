@@ -57,7 +57,7 @@ elif eleccion == "Ver Resumen Financiero":
 
             # Mostrar el gráfico
             fig = crear_grafico(ingresos=ingresos, egresos=egresos, ahorros=ahorros)
-            st.pyplot(fig=fig)
+            st.pyplot(fig=fig, width="stretch", use_container_width=True)
 elif eleccion == "Asistente Chatbot":
     st.header(" 💬 Tu IA Financiero")
 
@@ -74,11 +74,11 @@ elif eleccion == "Asistente Chatbot":
     if prompt := st.chat_input("Pregúntale algo a tu asistente..."):
         # Añadir el mensaje del usuario al historial
         st.session_state.messages.append({"role": "user", "content": prompt})
-        with st.chat_message("user"):
+        with st.chat_message("user", avatar="👨‍💻"):
             st.markdown(prompt)
 
         # Llamada a Gemini
-        with st.chat_message("assistant"):
+        with st.chat_message("assistant", avatar="💵"):
             try:
                 # Cargar los datos financieros para pasarselos a Gemini.
                 df_finanzas = pd.read_csv(CSV.CSV_FILE)
