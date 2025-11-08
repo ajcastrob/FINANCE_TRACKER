@@ -2,13 +2,16 @@ import streamlit as st
 from main import CSV, crear_grafico
 from data_entry import CATEGORIAS
 from datetime import datetime
+from chatbot_gemini import generar_respuesta_gemini
+import pandas as pd
 
 FORMAT = "%Y-%m-%d"
 
 
 st.title("📊 Agente de finanzas personales")
 eleccion = st.sidebar.radio(
-    label="Menú ", options=["Registrar transacción", "Ver Resumen Financiero"]
+    label="Menú ",
+    options=["Registrar transacción", "Ver Resumen Financiero", "Asistente Chatbot"],
 )
 
 if eleccion == "Registrar transacción":
@@ -55,3 +58,36 @@ elif eleccion == "Ver Resumen Financiero":
             # Mostrar el gráfico
             fig = crear_grafico(ingresos=ingresos, egresos=egresos, ahorros=ahorros)
             st.pyplot(fig=fig)
+elif eleccion == "Asistente Chatbot":
+    st.header(" 💬 Tu IA Financiero")
+
+    # Inicializar el historial del chat en st.session_state si no existe
+    if "messages" not in st.session_state:
+        st.session_state.messages = []
+
+    # Mostrar mensajes previos del historial
+    for message in st.session_state.messages:
+        with st.chat_message(message["role"]):
+            st.markdown(message["content"])
+
+    # Capturar la entrada del usuario
+    if prompt := st.chat_input("Pregúntale algo a tu asistente..."):
+        # Añadir el mensaje del usuario al historial
+        st.session_state.messages.append({"role": "user", "content": prompt})
+        with st.chat_message("user"):
+            st.markdown(prompt)
+
+        # Llamada a Gemini
+        with st.chat_message("assistant"):
+            try:
+                # Cargar los datos financieros para pasarselos a Gemini.
+                df_finanzas = pd.read_csv(CSV.CSV_FILE)
+
+                # Llamar a la función de Gemini
+                response = generar_respuesta_gemini(prompt, df_finanzas)
+                st.markdown(response)
+            except Exception as e:
+                response = f"Lo siento, hubo un error al obtener la respuesta {e}"
+                st.markdown(response)
+
+        st.session_state.messages.append({"role": "assitant", "content": response})
