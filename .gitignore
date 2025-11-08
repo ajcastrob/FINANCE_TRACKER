@@ -1,3 +1,9 @@
-/__pycache__
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[codz]
+*$py.class
+
 GEMINI.md 
 PLAN_DE_DESARROLLO.md
+/.streamlit/secrets.toml
+finanzas_personales.csv

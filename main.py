@@ -69,7 +69,7 @@ class CSV:
             print(f"😭 Egresos = ${egresos}")
             print(f"💪 Ahorros = ${ahorros:.2f}")
 
-        return ingresos, egresos, ahorros
+        return ingresos, egresos, ahorros, df_filtrado
 
 
 def recibir_entradas():
@@ -85,12 +85,36 @@ def recibir_entradas():
 
 def crear_grafico(ingresos, egresos, ahorros):
     etiquetas = ["Ingresos", "Egresos", "Ahorros"]
-    valores = [ingresos, egresos, ahorros]
+    sizes = [ingresos, egresos, ahorros]
+    explode = (0, 0.1, 0)
 
-    plt.bar(etiquetas, valores, color=["green", "red", "blue"], width=0.4)
-    plt.title("Resumen de Ingresos, egresos y ahorros: ")
-    plt.ylabel("Cantidad ($)")
-    plt.show()
+    if ahorros > 0:
+        fig, ax = plt.subplots()  # Creamos la figura y los ejes.
+        ax.pie(
+            sizes,
+            explode=explode,
+            labels=etiquetas,
+            autopct="%1.1f%%",
+            shadow=True,
+            startangle=90,
+        )
+        ax.axis("equal")
+        return fig
+    else:
+        etiquetas = ["Ingresos", "Egresos"]
+        sizes = [ingresos, egresos]
+        explode = (0, 0.1)
+        fig, ax = plt.subplots()  # Creamos la figura y los ejes.
+        ax.pie(
+            sizes,
+            explode=explode,
+            labels=etiquetas,
+            autopct="%1.1f%%",
+            shadow=True,
+            startangle=90,
+        )
+        ax.axis("equal")
+        return fig
 
 
 def main():
@@ -109,7 +133,9 @@ def main():
             fecha_final = obtener_fecha(
                 "Ingrese la fecha final en el formato valido (año-mes-día)"
             )
-            ingresos, egresos, ahorros = CSV.filtrar_entrada(fecha_inicio, fecha_final)
+            ingresos, egresos, ahorros, df_filtrado = CSV.filtrar_entrada(
+                fecha_inicio, fecha_final
+            )
             ver_grafico = input("Desea ver un resumen gráfico S/N: ").upper()
             if ver_grafico == "S":
                 crear_grafico(ingresos=ingresos, egresos=egresos, ahorros=ahorros)
