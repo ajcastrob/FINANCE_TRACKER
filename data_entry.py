@@ -5,23 +5,18 @@ CATEGORIAS = {"I": "Ingresos", "E": "Egresos"}
 
 
 def obtener_fecha(prompt, enter_key=False):
-    fecha = input(prompt)
-    if not fecha and not enter_key:
-        fecha_actual = datetime.today()
-        fecha_formateada = fecha_actual.strftime(FORMATO)
-        print(fecha_formateada)
-        return fecha_formateada
+    while True:
+        fecha = input(prompt)
+        if not fecha and not enter_key:
+            fecha_actual = datetime.today()
+            fecha_formateada = fecha_actual.strftime(FORMATO)
+            return fecha_formateada
 
-    try:
-        fecha_usuario = datetime.strptime(fecha, FORMATO)
-        fecha_formateada = fecha_usuario.strftime(FORMATO)
-        return fecha_usuario
-    except AttributeError:
-        print("❌ Debe ingresar una fecha en el formato válido: ")
-        return obtener_fecha(prompt, enter_key=False)
-    except ValueError:
-        print("❌ Debe ingresar una fecha en el formato válido: ")
-        return obtener_fecha(prompt, enter_key=False)
+        try:
+            datetime.strptime(fecha, FORMATO)
+            return fecha
+        except ValueError:
+            print("❌ Debe ingresar una fecha en el formato válido: ")
 
 
 def obtener_cantidad():
@@ -42,7 +37,6 @@ def obtener_cantidad():
 def obtener_categoria():
     categoria = input("Ingrese la categoría 'I'(Ingresos) o 'E'(Egresos): ").upper()
     if categoria in CATEGORIAS.keys():
-        print(CATEGORIAS[categoria])
         return CATEGORIAS[categoria]
 
     print("❌ Categoría inválida.")
@@ -51,9 +45,3 @@ def obtener_categoria():
 
 def obtener_descripcion():
     return input("Ingrese la descripción de la entrada: ")
-
-
-# obtener_fecha("Ingrese una fecha en formato válido (año-mes-día): ")
-# obtener_cantidad()
-obtener_categoria()
-obtener_descripcion()
