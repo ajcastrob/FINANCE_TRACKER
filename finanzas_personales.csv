@@ -1,10 +1,378 @@
 fecha,cantidad,categoria,descripcion
-2025-01-10,250.0,Egresos,Compras
-2025-11-07,14.0,Ingresos,Bono
-2025-07-14,142.0,Ingresos,Salario
-2025-11-07,100.0,Ingresos,Pago de deuda
-2025-07-21,100.0,Ingresos,Salario
-2025-11-03,15.0,Egresos,Compras
-2025-11-01,16.0,Egresos,Pago de alquiler
-2025-11-01,120.0,Egresos,Compra de laptop
-2025-11-08,0.01,Ingresos,
+2025-01-01,1014.6,Egresos,Servicios
+2025-01-01,822.29,Egresos,Educación
+2025-01-03,372.56,Ingresos,Bono
+2025-01-03,1580.12,Egresos,Educación
+2025-01-04,926.72,Egresos,Ocio
+2025-01-04,312.7,Ingresos,Pago de deuda
+2025-01-05,390.28,Egresos,Compras
+2025-01-05,1698.02,Egresos,Transporte
+2025-01-05,93.86,Egresos,Alquiler
+2025-01-08,1739.02,Egresos,Servicios
+2025-01-08,1163.31,Egresos,Ocio
+2025-01-08,1401.38,Egresos,Compras
+2025-01-09,1126.79,Ingresos,Salario
+2025-01-09,2528.12,Ingresos,Venta
+2025-01-11,1566.21,Ingresos,Bono
+2025-01-11,1104.62,Egresos,Transporte
+2025-01-12,432.14,Egresos,Transporte
+2025-01-12,1965.83,Ingresos,Venta
+2025-01-12,206.23,Egresos,Compras
+2025-01-13,794.0,Egresos,Comida
+2025-01-13,1710.6,Ingresos,Bono
+2025-01-13,191.4,Egresos,Servicios
+2025-01-15,2181.67,Ingresos,Devolución
+2025-01-15,497.97,Egresos,Transporte
+2025-01-16,1431.91,Egresos,Salud
+2025-01-16,995.31,Egresos,Alquiler
+2025-01-16,414.71,Ingresos,Salario
+2025-01-17,2446.97,Ingresos,Intereses
+2025-01-18,1815.47,Egresos,Alquiler
+2025-01-18,1147.31,Ingresos,Devolución
+2025-01-21,1123.64,Ingresos,Salario
+2025-01-21,1879.77,Egresos,Educación
+2025-01-23,1552.37,Ingresos,Intereses
+2025-01-23,1012.37,Ingresos,Bono
+2025-01-23,1225.7,Ingresos,Venta
+2025-01-27,474.4,Egresos,Compras
+2025-01-28,973.99,Egresos,Compras
+2025-01-28,1451.94,Ingresos,Bono
+2025-01-28,1535.31,Egresos,Servicios
+2025-01-29,690.01,Egresos,Compras
+2025-01-30,1117.51,Egresos,Transporte
+2025-02-02,529.66,Egresos,Educación
+2025-02-04,2942.92,Ingresos,Salario
+2025-02-04,1338.5,Ingresos,Devolución
+2025-02-04,1755.63,Egresos,Educación
+2025-02-05,1289.49,Ingresos,Pago de deuda
+2025-02-06,1651.43,Ingresos,Devolución
+2025-02-07,1296.52,Egresos,Transporte
+2025-02-07,641.45,Ingresos,Intereses
+2025-02-07,781.41,Ingresos,Pago de deuda
+2025-02-08,1349.76,Egresos,Compras
+2025-02-10,1088.36,Egresos,Comida
+2025-02-10,2026.69,Ingresos,Devolución
+2025-02-10,2918.73,Ingresos,Bono
+2025-02-11,775.08,Ingresos,Pago de deuda
+2025-02-11,2296.52,Ingresos,Pago de deuda
+2025-02-12,658.43,Ingresos,Devolución
+2025-02-13,1704.35,Egresos,Educación
+2025-02-13,1701.83,Egresos,Servicios
+2025-02-13,412.76,Egresos,Transporte
+2025-02-18,1980.17,Ingresos,Salario
+2025-02-18,2508.9,Ingresos,Salario
+2025-02-19,1022.99,Ingresos,Bono
+2025-02-21,1355.53,Egresos,Alquiler
+2025-02-22,1791.78,Egresos,Alquiler
+2025-02-22,1491.84,Ingresos,Pago de deuda
+2025-02-24,572.89,Egresos,Transporte
+2025-02-26,2205.14,Ingresos,Pago de deuda
+2025-02-26,188.98,Egresos,Compras
+2025-02-26,1045.22,Ingresos,Bono
+2025-02-27,2901.83,Ingresos,Pago de deuda
+2025-02-27,739.94,Egresos,Servicios
+2025-02-27,2994.21,Ingresos,Devolución
+2025-02-28,47.24,Egresos,Compras
+2025-03-03,1536.49,Ingresos,Bono
+2025-03-03,1417.94,Egresos,Ocio
+2025-03-03,1501.78,Egresos,Servicios
+2025-03-04,1516.55,Egresos,Comida
+2025-03-04,991.56,Egresos,Alquiler
+2025-03-04,1864.63,Ingresos,Devolución
+2025-03-05,2633.18,Ingresos,Pago de deuda
+2025-03-05,974.92,Ingresos,Venta
+2025-03-08,880.9,Ingresos,Pago de deuda
+2025-03-10,130.79,Ingresos,Bono
+2025-03-10,182.78,Egresos,Servicios
+2025-03-10,1821.14,Egresos,Ocio
+2025-03-12,360.77,Ingresos,Devolución
+2025-03-12,940.55,Egresos,Comida
+2025-03-13,902.52,Egresos,Alquiler
+2025-03-13,484.22,Ingresos,Pago de deuda
+2025-03-13,2586.38,Ingresos,Salario
+2025-03-16,298.41,Ingresos,Pago de deuda
+2025-03-25,1484.05,Ingresos,Intereses
+2025-03-26,929.18,Egresos,Educación
+2025-03-26,2038.67,Ingresos,Venta
+2025-03-27,357.42,Egresos,Transporte
+2025-03-29,1304.58,Ingresos,Devolución
+2025-03-29,1232.66,Ingresos,Devolución
+2025-03-29,374.25,Ingresos,Venta
+2025-03-31,829.58,Egresos,Comida
+2025-03-31,1582.98,Egresos,Comida
+2025-04-04,1009.76,Egresos,Alquiler
+2025-04-04,282.7,Egresos,Salud
+2025-04-04,2423.76,Ingresos,Bono
+2025-04-05,693.08,Ingresos,Venta
+2025-04-06,756.02,Ingresos,Salario
+2025-04-06,2813.08,Ingresos,Pago de deuda
+2025-04-07,195.76,Egresos,Ocio
+2025-04-07,1389.13,Egresos,Ocio
+2025-04-08,862.53,Ingresos,Salario
+2025-04-08,847.31,Ingresos,Salario
+2025-04-08,1625.67,Egresos,Alquiler
+2025-04-09,635.77,Egresos,Servicios
+2025-04-09,1117.54,Ingresos,Venta
+2025-04-09,1872.31,Ingresos,Devolución
+2025-04-11,162.32,Ingresos,Intereses
+2025-04-11,857.07,Ingresos,Bono
+2025-04-12,1524.95,Ingresos,Bono
+2025-04-12,1783.79,Egresos,Educación
+2025-04-13,1175.62,Egresos,Comida
+2025-04-13,1241.11,Ingresos,Devolución
+2025-04-14,142.48,Egresos,Compras
+2025-04-14,2855.76,Ingresos,Devolución
+2025-04-14,448.95,Egresos,Ocio
+2025-04-15,133.4,Ingresos,Salario
+2025-04-15,1752.82,Ingresos,Venta
+2025-04-15,1620.89,Egresos,Servicios
+2025-04-16,505.45,Ingresos,Salario
+2025-04-16,407.31,Ingresos,Bono
+2025-04-17,1679.34,Ingresos,Devolución
+2025-04-17,1005.78,Egresos,Transporte
+2025-04-17,2134.94,Ingresos,Venta
+2025-04-20,654.71,Egresos,Educación
+2025-04-20,1092.33,Ingresos,Intereses
+2025-04-20,537.78,Ingresos,Salario
+2025-04-24,614.54,Egresos,Compras
+2025-04-24,306.65,Ingresos,Devolución
+2025-04-24,1561.46,Ingresos,Salario
+2025-04-25,2111.28,Ingresos,Salario
+2025-04-25,2224.25,Ingresos,Salario
+2025-04-25,573.19,Ingresos,Pago de deuda
+2025-04-26,2160.3,Ingresos,Bono
+2025-04-26,607.93,Egresos,Educación
+2025-04-27,1657.77,Ingresos,Bono
+2025-04-27,1278.92,Ingresos,Devolución
+2025-04-27,71.72,Ingresos,Venta
+2025-04-28,2689.91,Ingresos,Pago de deuda
+2025-04-30,2915.61,Ingresos,Salario
+2025-04-30,1091.43,Egresos,Ocio
+2025-04-30,2662.0,Ingresos,Venta
+2025-05-02,1204.05,Egresos,Compras
+2025-05-02,1321.15,Egresos,Compras
+2025-05-03,457.47,Egresos,Comida
+2025-05-03,1528.44,Ingresos,Devolución
+2025-05-03,1782.03,Ingresos,Salario
+2025-05-04,1816.12,Egresos,Educación
+2025-05-04,1228.98,Egresos,Compras
+2025-05-05,560.77,Ingresos,Pago de deuda
+2025-05-08,572.1,Egresos,Compras
+2025-05-08,732.7,Ingresos,Pago de deuda
+2025-05-08,604.39,Ingresos,Pago de deuda
+2025-05-10,80.68,Ingresos,Pago de deuda
+2025-05-11,1242.34,Egresos,Transporte
+2025-05-11,773.85,Egresos,Ocio
+2025-05-13,2392.63,Ingresos,Devolución
+2025-05-13,134.17,Egresos,Servicios
+2025-05-14,1015.71,Egresos,Comida
+2025-05-17,295.53,Ingresos,Pago de deuda
+2025-05-17,2196.74,Ingresos,Venta
+2025-05-17,679.22,Egresos,Transporte
+2025-05-18,1685.34,Ingresos,Venta
+2025-05-18,1953.87,Egresos,Transporte
+2025-05-19,1032.1,Egresos,Compras
+2025-05-19,2500.39,Ingresos,Pago de deuda
+2025-05-20,1165.56,Ingresos,Bono
+2025-05-20,852.87,Ingresos,Salario
+2025-05-22,252.6,Ingresos,Salario
+2025-05-22,2943.38,Ingresos,Venta
+2025-05-23,1162.51,Egresos,Ocio
+2025-05-23,530.85,Egresos,Servicios
+2025-05-28,896.65,Ingresos,Bono
+2025-05-28,1462.66,Ingresos,Intereses
+2025-05-28,1566.9,Egresos,Compras
+2025-05-31,1576.67,Ingresos,Devolución
+2025-05-31,804.89,Ingresos,Intereses
+2025-05-31,131.9,Egresos,Compras
+2025-06-01,2331.43,Ingresos,Devolución
+2025-06-02,1328.65,Egresos,Alquiler
+2025-06-02,174.45,Egresos,Transporte
+2025-06-03,1659.56,Egresos,Comida
+2025-06-03,222.63,Ingresos,Bono
+2025-06-03,1164.63,Ingresos,Salario
+2025-06-06,982.97,Egresos,Educación
+2025-06-06,117.23,Egresos,Compras
+2025-06-07,640.51,Ingresos,Devolución
+2025-06-07,562.83,Egresos,Servicios
+2025-06-07,1213.7,Egresos,Salud
+2025-06-08,989.4,Egresos,Compras
+2025-06-08,2344.84,Ingresos,Bono
+2025-06-08,1327.33,Ingresos,Salario
+2025-06-09,1603.92,Egresos,Servicios
+2025-06-10,751.99,Ingresos,Pago de deuda
+2025-06-10,721.7,Ingresos,Intereses
+2025-06-11,1989.76,Egresos,Ocio
+2025-06-11,1436.03,Ingresos,Devolución
+2025-06-15,1517.49,Egresos,Compras
+2025-06-15,1448.84,Ingresos,Salario
+2025-06-16,1210.09,Egresos,Alquiler
+2025-06-16,485.12,Egresos,Servicios
+2025-06-19,312.08,Egresos,Servicios
+2025-06-20,1069.63,Egresos,Ocio
+2025-06-20,1949.8,Egresos,Servicios
+2025-06-21,1774.21,Egresos,Comida
+2025-06-22,1755.99,Ingresos,Pago de deuda
+2025-06-23,1147.09,Ingresos,Pago de deuda
+2025-06-25,2341.86,Ingresos,Venta
+2025-06-25,2273.85,Ingresos,Pago de deuda
+2025-06-25,1301.6,Egresos,Salud
+2025-06-26,729.97,Ingresos,Salario
+2025-06-26,714.4,Ingresos,Salario
+2025-06-26,1718.0,Egresos,Salud
+2025-06-27,643.71,Ingresos,Devolución
+2025-06-28,2066.93,Ingresos,Salario
+2025-06-30,2708.71,Ingresos,Venta
+2025-06-30,186.67,Ingresos,Devolución
+2025-07-01,495.76,Ingresos,Bono
+2025-07-01,846.87,Egresos,Educación
+2025-07-01,1772.32,Ingresos,Intereses
+2025-07-02,236.34,Egresos,Salud
+2025-07-02,1666.25,Egresos,Salud
+2025-07-05,1184.43,Egresos,Alquiler
+2025-07-05,1885.93,Ingresos,Pago de deuda
+2025-07-05,193.12,Egresos,Servicios
+2025-07-06,1473.04,Egresos,Salud
+2025-07-06,2676.93,Ingresos,Salario
+2025-07-06,2728.72,Ingresos,Devolución
+2025-07-07,1459.87,Ingresos,Intereses
+2025-07-09,1960.05,Egresos,Comida
+2025-07-11,657.47,Ingresos,Venta
+2025-07-11,510.5,Egresos,Ocio
+2025-07-12,1462.1,Egresos,Salud
+2025-07-12,1296.08,Egresos,Servicios
+2025-07-12,419.41,Ingresos,Devolución
+2025-07-15,789.02,Egresos,Comida
+2025-07-15,963.7,Ingresos,Venta
+2025-07-15,1926.19,Egresos,Ocio
+2025-07-16,854.39,Ingresos,Salario
+2025-07-16,1735.48,Ingresos,Venta
+2025-07-16,1003.66,Ingresos,Venta
+2025-07-18,48.25,Egresos,Compras
+2025-07-18,470.62,Egresos,Compras
+2025-07-20,931.17,Egresos,Comida
+2025-07-20,2525.12,Ingresos,Salario
+2025-07-20,270.31,Egresos,Salud
+2025-07-21,1046.07,Egresos,Servicios
+2025-07-21,1114.81,Egresos,Compras
+2025-07-22,1647.6,Egresos,Salud
+2025-07-22,1150.72,Egresos,Servicios
+2025-07-22,2891.88,Ingresos,Intereses
+2025-07-25,216.6,Egresos,Alquiler
+2025-07-25,1751.63,Egresos,Compras
+2025-07-25,2311.38,Ingresos,Venta
+2025-07-26,1477.33,Ingresos,Venta
+2025-07-27,1583.54,Ingresos,Venta
+2025-07-27,1395.48,Egresos,Alquiler
+2025-07-29,1323.21,Ingresos,Pago de deuda
+2025-07-30,491.38,Ingresos,Pago de deuda
+2025-07-30,2117.9,Ingresos,Intereses
+2025-08-01,1659.9,Ingresos,Salario
+2025-08-01,633.58,Egresos,Transporte
+2025-08-02,902.13,Egresos,Comida
+2025-08-03,437.47,Egresos,Comida
+2025-08-03,1116.78,Egresos,Servicios
+2025-08-03,1372.04,Ingresos,Venta
+2025-08-04,228.88,Ingresos,Devolución
+2025-08-04,2996.61,Ingresos,Salario
+2025-08-05,2816.19,Ingresos,Venta
+2025-08-05,211.61,Ingresos,Salario
+2025-08-07,728.2,Egresos,Servicios
+2025-08-08,1864.57,Ingresos,Intereses
+2025-08-08,324.34,Ingresos,Bono
+2025-08-08,712.29,Egresos,Comida
+2025-08-10,1936.22,Ingresos,Venta
+2025-08-10,2831.68,Ingresos,Intereses
+2025-08-11,826.42,Ingresos,Salario
+2025-08-13,2442.22,Ingresos,Venta
+2025-08-15,1464.19,Egresos,Salud
+2025-08-15,2505.06,Ingresos,Salario
+2025-08-15,2031.45,Ingresos,Bono
+2025-08-16,1686.23,Egresos,Salud
+2025-08-16,1787.6,Egresos,Educación
+2025-08-17,2400.82,Ingresos,Pago de deuda
+2025-08-22,408.97,Ingresos,Pago de deuda
+2025-08-22,1106.91,Ingresos,Bono
+2025-08-23,2864.1,Ingresos,Venta
+2025-08-23,2456.74,Ingresos,Bono
+2025-08-24,1502.35,Ingresos,Devolución
+2025-08-24,680.78,Ingresos,Intereses
+2025-08-25,1057.87,Egresos,Transporte
+2025-08-25,2409.15,Ingresos,Bono
+2025-08-27,709.77,Ingresos,Pago de deuda
+2025-08-28,621.13,Egresos,Salud
+2025-08-28,671.48,Egresos,Educación
+2025-08-28,1886.69,Ingresos,Pago de deuda
+2025-08-30,470.64,Ingresos,Devolución
+2025-08-30,1447.13,Egresos,Ocio
+2025-08-30,1063.26,Egresos,Transporte
+2025-08-31,1476.55,Egresos,Salud
+2025-09-02,898.43,Egresos,Transporte
+2025-09-02,1135.92,Ingresos,Pago de deuda
+2025-09-09,795.66,Ingresos,Devolución
+2025-09-09,2064.52,Ingresos,Pago de deuda
+2025-10-01,348.42,Ingresos,Intereses
+2025-10-01,567.83,Egresos,Ocio
+2025-10-02,1584.06,Ingresos,Bono
+2025-10-03,2352.66,Ingresos,Salario
+2025-10-03,1243.79,Ingresos,Pago de deuda
+2025-10-05,1501.5,Egresos,Ocio
+2025-10-05,1246.68,Egresos,Alquiler
+2025-10-06,1954.25,Ingresos,Intereses
+2025-10-07,2566.75,Ingresos,Venta
+2025-10-07,260.86,Egresos,Compras
+2025-10-07,1936.02,Egresos,Alquiler
+2025-10-08,165.39,Egresos,Compras
+2025-10-08,1610.95,Ingresos,Venta
+2025-10-09,1738.22,Egresos,Ocio
+2025-10-09,700.06,Egresos,Salud
+2025-10-09,1095.15,Ingresos,Pago de deuda
+2025-10-10,2723.86,Ingresos,Devolución
+2025-10-10,828.07,Ingresos,Devolución
+2025-10-11,1081.95,Ingresos,Intereses
+2025-10-12,265.89,Egresos,Educación
+2025-10-12,805.86,Egresos,Ocio
+2025-10-12,122.72,Egresos,Salud
+2025-10-13,2498.82,Ingresos,Venta
+2025-10-14,1582.62,Egresos,Servicios
+2025-10-15,521.98,Ingresos,Pago de deuda
+2025-10-15,2614.89,Ingresos,Bono
+2025-10-15,2831.71,Ingresos,Devolución
+2025-10-17,1401.62,Ingresos,Bono
+2025-10-17,1573.64,Egresos,Alquiler
+2025-10-17,1067.79,Egresos,Compras
+2025-10-19,1518.69,Ingresos,Salario
+2025-10-19,1024.71,Egresos,Educación
+2025-10-19,647.97,Ingresos,Salario
+2025-10-22,290.8,Ingresos,Intereses
+2025-10-22,1281.17,Egresos,Salud
+2025-10-22,399.47,Egresos,Alquiler
+2025-10-23,1276.19,Egresos,Compras
+2025-10-23,1208.85,Ingresos,Pago de deuda
+2025-10-24,1968.19,Egresos,Servicios
+2025-10-24,2042.96,Ingresos,Pago de deuda
+2025-10-24,1685.0,Egresos,Compras
+2025-10-26,40.95,Egresos,Ocio
+2025-10-27,974.65,Egresos,Compras
+2025-10-27,2974.81,Ingresos,Salario
+2025-10-27,882.92,Egresos,Transporte
+2025-10-28,1845.6,Ingresos,Pago de deuda
+2025-10-28,47.79,Egresos,Comida
+2025-10-29,1873.94,Egresos,Compras
+2025-10-29,2360.88,Ingresos,Devolución
+2025-10-29,203.82,Egresos,Compras
+2025-10-30,1235.7,Ingresos,Bono
+2025-10-31,1801.67,Egresos,Comida
+2025-10-31,1706.61,Ingresos,Salario
+2025-10-31,1582.69,Egresos,Alquiler
+2025-11-03,2166.64,Ingresos,Bono
+2025-11-05,1649.09,Egresos,Transporte
+2025-11-05,1786.95,Egresos,Ocio
+2025-11-06,719.05,Egresos,Servicios
+2025-11-06,407.45,Ingresos,Pago de deuda
+2025-11-07,301.53,Ingresos,Devolución
+2025-11-07,1209.14,Ingresos,Bono
+2025-11-08,631.34,Ingresos,Intereses
+2025-11-08,1595.91,Egresos,Educación
+2025-11-08,617.79,Egresos,Comida
+

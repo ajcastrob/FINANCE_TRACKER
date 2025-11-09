@@ -50,7 +50,8 @@ El proyecto incluye un archivo `requirements.txt` para facilitar la instalación
 ```bash
 pip install -r requirements.txt
 ```
-*Si no tienes el archivo `requirements.txt`, puedes crearlo con `pip freeze > requirements.txt` después de instalar las librerías manualmente (`pandas`, `streamlit`, `matplotlib`, `google-generativeai`, `tabulate`).*
+
+_Si no tienes el archivo `requirements.txt`, puedes crearlo con `pip freeze > requirements.txt` después de instalar las librerías manualmente (`pandas`, `streamlit`, `matplotlib`, `google-generativeai`, `tabulate`)._
 
 ### 4. Configurar la API Key de Gemini
 
@@ -59,13 +60,14 @@ Para que el chatbot funcione, necesitas una clave de API de Google Gemini.
 a. **Obtén tu clave:** Ve a [Google AI Studio](https://aistudio.google.com/app/apikey) y genera una nueva clave.
 
 b. **Guárdala de forma segura:**
-   - Crea una carpeta llamada `.streamlit` en la raíz del proyecto.
-   - Dentro de `.streamlit`, crea un archivo llamado `secrets.toml`.
-   - Añade tu clave al archivo de la siguiente manera:
-     ```toml
-     # .streamlit/secrets.toml
-     GEMINI_API_KEY = "AQUI_VA_TU_CLAVE_API"
-     ```
+
+- Crea una carpeta llamada `.streamlit` en la raíz del proyecto.
+- Dentro de `.streamlit`, crea un archivo llamado `secrets.toml`.
+- Añade tu clave al archivo de la siguiente manera:
+  ```toml
+  # .streamlit/secrets.toml
+  GEMINI_API_KEY = "AQUI_VA_TU_CLAVE_API"
+  ```
 
 ## Usage
 
