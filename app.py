@@ -1,11 +1,12 @@
 import streamlit as st
 from main import CSV, crear_grafico, crear_grafico_tendencia
 from data_entry import CATEGORIAS
-from datetime import datetime, timedelta
-from chatbot_gemini import generar_respuesta_gemini, procesar_comando_rapido
+from datetime import datetime
+from chatbot_gemini import generar_respuesta_gemini
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
+from comandos import procesar_comando_rapido
 
 # Constante para las variables de tiempo.
 FORMAT = "%Y-%m-%d"
@@ -47,7 +48,7 @@ if eleccion == "🏠 Resumen financiero":
         with col2:
             st.metric("💸 Egresos totales", f"${total_egresos:,.2f}")
         with col3:
-            st.metric("📓 Balance total", f"{balance_total:,.2f}")
+            st.metric("📓 Balance total", f"${balance_total:,.2f}")
 
         # Crear el gráfico para los valores con plotly
         datos_year = ["Total ingresos", "Total egresos", "Balance total"]
