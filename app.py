@@ -9,13 +9,14 @@ from pages.chat import pag4
 FORMAT = "%Y-%m-%d"
 IMAGEN_LOGO = "assets/logo.png"
 
-st.image(IMAGEN_LOGO, width=80)
-st.logo(IMAGEN_LOGO, size="large")
 st.set_page_config(
     page_title="Finance Tracker",
     page_icon="💰",
     initial_sidebar_state="expanded",
 )
+st.image(IMAGEN_LOGO, width=80)
+st.logo(IMAGEN_LOGO, size="large")
+
 
 st.title("📊 Agente de finanzas personales")
 st.caption("Gestiona tus ingresos y egresos con ayuda de inteligencia artificial 💻 ")
