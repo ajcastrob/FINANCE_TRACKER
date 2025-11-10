@@ -1,7 +1,7 @@
 import streamlit as st
 import google.generativeai as genai
 import pandas as pd
-from contexto import obtener_contexto_financiero
+from chatbot.contexto import obtener_contexto_financiero
 
 # Configurar la clave API de Google.
 genai.configure(api_key=st.secrets["GEMINI_API_KEY"])

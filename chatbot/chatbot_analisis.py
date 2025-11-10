@@ -1,6 +1,6 @@
 import google.generativeai as genai
 import pandas as pd
-from contexto import obtener_contexto_financiero
+from chatbot.contexto import obtener_contexto_financiero
 
 
 def analizar_finanzas_proactivo(datos_df: pd.DataFrame) -> str:

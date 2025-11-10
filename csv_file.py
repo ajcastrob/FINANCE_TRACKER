@@ -1,0 +1,65 @@
+import pandas as pd
+import csv
+from datetime import datetime
+
+
+class CSV:
+    CSV_FILE = "finanzas_personales.csv"
+    COLUMNS = ["fecha", "cantidad", "categoria", "descripcion"]
+    FORMAT = "%Y-%m-%d"
+
+    @classmethod
+    def crear_csv_inicial(cls):
+        try:
+            df = pd.read_csv(cls.CSV_FILE)
+        except FileNotFoundError:
+            df = pd.DataFrame(columns=cls.COLUMNS)
+            df.to_csv(cls.CSV_FILE, index=False)
+            print("🗒️ Archivo creado con éxito.")
+
+    @classmethod
+    def agregar_entrada(cls, fecha, cantidad, categoria, descripcion):
+        nueva_entrada = {
+            "fecha": fecha,
+            "cantidad": cantidad,
+            "categoria": categoria,
+            "descripcion": descripcion,
+        }
+
+        with open(cls.CSV_FILE, "a", newline="") as data:
+            csv_nueva_entrada = csv.DictWriter(data, fieldnames=cls.COLUMNS)
+            csv_nueva_entrada.writerow(nueva_entrada)
+
+        print("✏️ Entrada nueva se registró de forma exitosa.")
+
+    @classmethod
+    def filtrar_entrada(cls, fecha_inicio, fecha_final):
+        df = pd.read_csv(cls.CSV_FILE)
+        df["fecha"] = pd.to_datetime(df["fecha"], format=cls.FORMAT)
+
+        fecha_inicio = datetime.strptime(fecha_inicio, cls.FORMAT)
+        fecha_final = datetime.strptime(fecha_final, cls.FORMAT)
+
+        mask = (df["fecha"] >= fecha_inicio) & (df["fecha"] <= fecha_final)
+
+        df_filtrado = df[mask]
+        ingresos = df_filtrado.loc[df_filtrado["categoria"] == "Ingresos"]
+        ingresos = ingresos["cantidad"].sum()
+
+        egresos = df_filtrado.loc[df_filtrado["categoria"] == "Egresos"]
+        egresos = egresos["cantidad"].sum()
+
+        ahorros = ingresos - egresos
+
+        if df_filtrado.empty:
+            print("\n 🥲 No hay entradas durante esas fechas.")
+        else:
+            print(
+                f"\n 📓Estado financiero durante {fecha_inicio.strftime(cls.FORMAT)} hasta {fecha_final.strftime(cls.FORMAT)}: "
+            )
+            print(df_filtrado.to_string(index=False))
+            print(f"\n✌️ Ingresos = ${ingresos}")
+            print(f"😭 Egresos = ${egresos}")
+            print(f"💪 Ahorros = ${ahorros:.2f}")
+
+        return ingresos, egresos, ahorros, df_filtrado

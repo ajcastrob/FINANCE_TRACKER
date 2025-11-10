@@ -1,15 +1,17 @@
 import streamlit as st
-from main import CSV, crear_grafico, crear_grafico_tendencia
+from csv_file import CSV
+from graficos.graficos import crear_grafico, crear_grafico_tendencia
 from data_entry import CATEGORIAS
 from datetime import datetime
-from chatbot_gemini import generar_respuesta_gemini
+from chatbot.chatbot_gemini import generar_respuesta_gemini
+from chatbot.comandos import procesar_comando_rapido
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
-from comandos import procesar_comando_rapido
 
-# Constante para las variables de tiempo.
+# Constantes.
 FORMAT = "%Y-%m-%d"
+IMAGEN_LOGO = "assets/logo.png"
 
 st.set_page_config(
     page_title="Finance Tracker",
@@ -27,7 +29,7 @@ eleccion = st.sidebar.radio(
         "🗣️ Asistente Chatbot",
     ],
 )
-st.logo("logo.png", size="large")
+st.logo(IMAGEN_LOGO, size="large")
 if eleccion == "🏠 Resumen financiero":
     st.header("📈 Resumen Financiero")
 
@@ -128,7 +130,7 @@ elif eleccion == "📪 Registrar transacción":
 
     with st.form("transaction_form"):
         fecha = st.date_input("Fecha")
-        cantidad = st.number_input("Cantidad", min_value=0.01, format="%.2f")
+        cantidad = st.number_input("Cantidad", step=0.01, min_value=0.01, format="%.2f")
         categoria = st.selectbox("Categoria", options=list(CATEGORIAS.values()))
         descripcion = st.text_input(
             "Descripción", placeholder="Ej: Compra en supermercado"
