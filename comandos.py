@@ -1,6 +1,7 @@
 import pandas as pd
 from datetime import datetime, timedelta
 from chatbot_analisis import analizar_finanzas_proactivo
+from contexto import obtener_contexto_financiero
 
 
 def procesar_comando_rapido(comando: str, datos_df: pd.DataFrame) -> str:
@@ -10,6 +11,9 @@ def procesar_comando_rapido(comando: str, datos_df: pd.DataFrame) -> str:
 
     comando = comando.lower().strip()
 
+    # Obtener contexto del dataset.
+    contexto = obtener_contexto_financiero(datos_df=datos_df)
+
     if datos_df.empty:
         return "🪛 No hay datos disponibles para procesar comando."
 
@@ -18,9 +22,9 @@ def procesar_comando_rapido(comando: str, datos_df: pd.DataFrame) -> str:
     # Comando /resumen:
 
     if comando == "/resumen":
-        total_ingresos = datos_df[datos_df["categoria"] == "Ingresos"]["cantidad"].sum()
-        total_egresos = datos_df[datos_df["categoria"] == "Egresos"]["cantidad"].sum()
-        balance = total_ingresos - total_egresos
+        total_ingresos = contexto.get("total_ingresos", 0)
+        total_egresos = contexto.get("total_egresos", 0)
+        balance = contexto.get("balance_total", 0)
         total_transacciones = len(datos_df)
 
         return f"""
