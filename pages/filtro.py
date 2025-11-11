@@ -1,5 +1,4 @@
 import streamlit as st
-from datetime import datetime
 from csv_file import CSV
 from graficos.graficos import crear_grafico, crear_grafico_tendencia
 

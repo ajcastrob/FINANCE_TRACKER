@@ -30,8 +30,6 @@ class CSV:
             csv_nueva_entrada = csv.DictWriter(data, fieldnames=cls.COLUMNS)
             csv_nueva_entrada.writerow(nueva_entrada)
 
-        print("✏️ Entrada nueva se registró de forma exitosa.")
-
     @classmethod
     def filtrar_entrada(cls, fecha_inicio, fecha_final):
         df = pd.read_csv(cls.CSV_FILE)
@@ -50,16 +48,5 @@ class CSV:
         egresos = egresos["cantidad"].sum()
 
         ahorros = ingresos - egresos
-
-        if df_filtrado.empty:
-            print("\n 🥲 No hay entradas durante esas fechas.")
-        else:
-            print(
-                f"\n 📓Estado financiero durante {fecha_inicio.strftime(cls.FORMAT)} hasta {fecha_final.strftime(cls.FORMAT)}: "
-            )
-            print(df_filtrado.to_string(index=False))
-            print(f"\n✌️ Ingresos = ${ingresos}")
-            print(f"😭 Egresos = ${egresos}")
-            print(f"💪 Ahorros = ${ahorros:.2f}")
 
         return ingresos, egresos, ahorros, df_filtrado
