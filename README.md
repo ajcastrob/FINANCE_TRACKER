@@ -1,48 +1,253 @@
-# 📊 Gestor de Finanzas Personales con Asistente de IA
+# 💰 Finance Tracker
 
-Una aplicación moderna de seguimiento financiero personal con inteligencia artificial, construida con Streamlit y Google Gemini. Registra transacciones, visualiza tendencias y obtén análisis inteligentes de tus finanzas mediante un chatbot conversacional.
+### Tu asistente personal de finanzas con Inteligencia Artificial
+
+Gestiona tus ingresos y egresos de forma inteligente con visualizaciones interactivas y análisis conversacional powered by Google Gemini.
 
 ---
 
-## ✨ Características Principales
+## 🎯 ¿Qué es Finance Tracker?
 
-### 🖥️ **Interfaz Multi-Página Moderna**
+Finance Tracker es una aplicación moderna de gestión financiera personal que combina:
 
-- **Dashboard Financiero**: Visualiza tu situación financiera completa de un vistazo
-- **Registro de Transacciones**: Formulario intuitivo para agregar ingresos y egresos
-- **Filtros Avanzados**: Analiza transacciones por rangos de fechas
-- **Chatbot con IA**: Asistente conversacional para análisis financiero en lenguaje natural
+- 📊 **Visualizaciones Interactivas** - Gráficos dinámicos con Plotly y Matplotlib
+- 🤖 **Chatbot con IA** - Análisis conversacional usando Google Gemini
+- 📱 **Interfaz Moderna** - Diseño multi-página con Streamlit
+- 💾 **Gestión Simple** - Almacenamiento en CSV, fácil de usar
 
-### 💰 **Gestión de Finanzas**
+---
 
-- Registro fácil de ingresos y egresos
-- Categorización de transacciones
-- Cálculo automático de balance y ahorros
-- Métricas en tiempo real
+## ✨ Características Destacadas
 
-### 📊 **Visualizaciones Interactivas**
+### 🏠 Dashboard Financiero
 
-- Gráficos de barras comparativos con Plotly
-- Gráficos de torta para distribución mensual
-- Gráficos de tendencia temporal con Matplotlib
-- Dashboard responsive y profesional
+Visualiza tu situación financiera completa de un vistazo:
 
-### 🤖 **Asistente de IA (AdamBot)**
+- Balance total en tiempo real
+- Métricas del mes actual
+- Últimas 5 transacciones
+- Gráficos comparativos interactivos
 
-- **Comandos rápidos**:
-  - `/resumen` - Resumen general de finanzas
-  - `/mes` - Análisis del mes actual
-  - `/semana` - Últimos 7 días
-  - `/analisis` - Análisis proactivo con IA
-  - `/ayuda` - Mostrar comandos disponibles
-- **Conversación natural**: Haz preguntas como "¿Cuánto gasté la semana pasada?"
-- **Memoria conversacional**: Recuerda el contexto de la conversación
-- **Análisis inteligente**: Detecta patrones y proporciona recomendaciones
+### 💬 Chatbot Inteligente (AdamBot)
 
-### 🖥️ **Doble Interfaz**
+Interactúa con tus finanzas en lenguaje natural:
 
-- **Web App**: Interfaz moderna con Streamlit (recomendada)
-- **CLI**: Versión de línea de comandos para uso rápido en terminal
+**Comandos Rápidos:**
+
+- `/resumen` → Vista general de tus finanzas
+- `/mes` → Análisis del mes actual
+- `/semana` → Últimos 7 días
+- `/analisis` → Insights con IA
+
+**Preguntas Naturales:**
+
+- "¿Cuál es mi balance actual?"
+- "¿Cuánto gasté la semana pasada?"
+- "¿En qué categoría gasto más?"
+
+### 📈 Análisis Avanzados
+
+- Gráficos de tendencia temporal
+- Comparativas por categorías
+- Filtros por rangos de fechas
+- Detección de patrones de gasto
+
+---
+
+## 🚀 Inicio Rápido
+
+```bash
+# 1. Clona el repositorio
+git clone https://github.com/tu-usuario/finance_tracker.git
+cd finance_tracker
+
+# 2. Instala dependencias
+pip install -r requirements.txt
+
+# 3. Configura tu API Key de Gemini
+# Crea .streamlit/secrets.toml y agrega:
+# GEMINI_API_KEY = "tu_api_key"
+
+# 4. ¡Lanza la app!
+streamlit run app.py
+```
+
+---
+
+## 🛠️ Tecnologías
+
+| Tech              | Uso                   |
+| ----------------- | --------------------- |
+| **Python 3.12**   | Lenguaje base         |
+| **Streamlit**     | Framework web         |
+| **Google Gemini** | IA conversacional     |
+| **Pandas**        | Análisis de datos     |
+| **Plotly**        | Gráficos interactivos |
+
+---
+
+## 📸 Vista Previa
+
+### Dashboard Principal
+
+> Visualiza tus métricas financieras con gráficos modernos e interactivos
+
+### Chatbot con IA
+
+> Pregunta en lenguaje natural y obtén análisis inteligentes
+
+### Filtros Avanzados
+
+> Analiza períodos específicos con gráficos de tendencia
+
+---
+
+## 🎯 ¿Para quién es?
+
+✅ **Personas** que quieren controlar sus gastos personales  
+✅ **Freelancers** que necesitan tracking simple de ingresos/egresos  
+✅ **Estudiantes** aprendiendo gestión financiera  
+✅ **Desarrolladores** buscando un proyecto base con IA
+
+---
+
+## 🌟 Por qué Finance Tracker
+
+| Característica        | Finance Tracker            | Otras Apps            |
+| --------------------- | -------------------------- | --------------------- |
+| **Open Source**       | ✅ Gratis y personalizable | ❌ Cerrado            |
+| **IA Conversacional** | ✅ Chatbot con Gemini      | ❌ Solo reportes      |
+| **Privacidad**        | ✅ Datos en tu máquina     | ❌ En la nube         |
+| **Personalizable**    | ✅ Código abierto          | ❌ Limitado           |
+| **Moderno**           | ✅ Stack actual            | ⚠️ Tecnología antigua |
+
+---
+
+## 📦 Instalación Completa
+
+### Requisitos Previos
+
+- Python 3.12 o superior
+- API Key de Google Gemini (gratis en [Google AI Studio](https://aistudio.google.com))
+- Conexión a internet (solo para el chatbot)
+
+### Pasos de Instalación
+
+#### 1️⃣ Clonar el Repositorio
+
+```bash
+git clone https://github.com/tu-usuario/finance_tracker.git
+cd finance_tracker
+```
+
+#### 2️⃣ Entorno Virtual
+
+```bash
+# macOS/Linux
+python3 -m venv venv
+source venv/bin/activate
+
+# Windows
+python -m venv venv
+venv\Scripts\activate
+```
+
+#### 3️⃣ Instalar Dependencias
+
+```bash
+pip install -r requirements.txt
+```
+
+#### 4️⃣ Configurar API Key de Gemini
+
+**Obtener la API Key:**
+
+1. Ve a [Google AI Studio](https://aistudio.google.com/app/apikey)
+2. Inicia sesión con tu cuenta de Google
+3. Crea una nueva API Key
+4. Copia la clave generada
+
+**Configurar en el proyecto:**
+
+```bash
+# Crear carpeta de configuración
+mkdir .streamlit
+
+# Crear archivo de secrets
+touch .streamlit/secrets.toml
+
+# Agregar tu API Key (abre el archivo y edita)
+echo 'GEMINI_API_KEY = "tu_api_key_aquí"' > .streamlit/secrets.toml
+```
+
+⚠️ **Nota**: El archivo `secrets.toml` está en `.gitignore` por seguridad.
+
+#### 5️⃣ Ejecutar la Aplicación
+
+**Opción 1: Aplicación Web (Recomendada)**
+
+```bash
+streamlit run app.py
+```
+
+Se abrirá automáticamente en `http://localhost:8501`
+
+**Opción 2: Versión CLI**
+
+```bash
+python main.py
+```
+
+---
+
+## 💡 Guía de Uso
+
+### 📝 Registrar una Transacción
+
+1. Ve a **"Registrar transacción"** en el menú lateral
+2. Completa el formulario:
+   - Fecha de la transacción
+   - Cantidad (sin símbolos, solo números)
+   - Categoría (Ingresos o Egresos)
+   - Descripción breve
+3. Haz clic en **"Guardar transacción"**
+4. ¡Listo! Tu transacción se guarda automáticamente
+
+### 📊 Ver Dashboard
+
+1. Abre **"Resumen financiero"**
+2. Visualiza:
+   - Balance total
+   - Ingresos y egresos totales
+   - Gráfico comparativo
+   - Resumen del mes actual
+   - Últimas 5 transacciones
+
+### 🔍 Filtrar Transacciones
+
+1. Ve a **"Filtrar transacción"**
+2. Selecciona:
+   - Fecha de inicio
+   - Fecha final
+3. Haz clic en **"Ver resumen"**
+4. Obtén:
+   - Tabla de transacciones del período
+   - Métricas calculadas
+   - Gráfico de tendencia temporal
+
+### 💬 Usar el Chatbot
+
+1. Abre **"Asistente Chatbot"**
+2. Escribe un comando rápido:
+   - `/resumen` - Vista general
+   - `/mes` - Análisis mensual
+   - `/semana` - Últimos 7 días
+   - `/analisis` - Análisis con IA
+   - `/ayuda` - Lista de comandos
+3. O haz preguntas naturales:
+   - "¿Cuánto gasté esta semana?"
+   - "¿Cuál es mi balance?"
+   - "Analiza mis finanzas"
 
 ---
 
@@ -51,202 +256,52 @@ Una aplicación moderna de seguimiento financiero personal con inteligencia arti
 ```
 finance_tracker/
 │
-├── 📂 assets/              # Recursos estáticos (logo, imágenes)
-├── 📂 chatbot/             # Paquete del chatbot con IA
-│   ├── chatbot_gemini.py   # Conversación con Google Gemini
-│   ├── comandos.py         # Procesamiento de comandos rápidos
-│   ├── contexto.py         # Extracción de contexto financiero
-│   └── chatbot_analisis.py # Análisis proactivo con IA
+├── 📂 assets/              # Recursos estáticos
+│   └── logo.png
+│
+├── 📂 chatbot/             # Paquete del chatbot IA
+│   ├── chatbot_gemini.py   # Conversación con Gemini
+│   ├── comandos.py         # Comandos rápidos
+│   ├── contexto.py         # Extracción de contexto
+│   └── chatbot_analisis.py # Análisis proactivo
 │
 ├── 📂 graficos/            # Módulo de visualizaciones
-│   └── graficos.py         # Funciones para gráficos
+│   └── graficos.py         # Funciones de gráficos
 │
-├── 📂 pages/               # Páginas de la aplicación web
+├── 📂 pages/               # Páginas de la aplicación
 │   ├── resumen.py          # Dashboard principal
 │   ├── transaccion.py      # Formulario de registro
 │   ├── filtro.py           # Filtros de transacciones
 │   └── chat.py             # Interfaz del chatbot
 │
-├── 📄 app.py               # Entrada principal de la web app
-├── 📄 csv_file.py          # Gestión de persistencia de datos
-├── 📄 data_entry.py        # Validación de entrada de datos
-├── 📄 main.py              # CLI - Versión de línea de comandos
+├── 📄 app.py               # Entrada principal (web)
+├── 📄 csv_file.py          # Gestión de persistencia
+├── 📄 data_entry.py        # Validación de datos
+├── 📄 main.py              # CLI - Línea de comandos
 ├── 📄 version_cli.py       # CLI alternativa
 │
-├── 📄 finanzas_personales.csv  # Base de datos (generado automáticamente)
-├── 📄 requirements.txt     # Dependencias del proyecto
-└── 📄 README.md            # Este archivo
+├── 📄 finanzas_personales.csv  # Base de datos (auto-generado)
+├── 📄 requirements.txt     # Dependencias
+├── 📄 README.md            # Este archivo
+└── 📄 .gitignore           # Archivos ignorados por Git
 ```
+
+### Principios de Arquitectura
+
+Este proyecto sigue **Clean Architecture**:
+
+- ✅ **Separación de responsabilidades** - Cada módulo tiene un propósito único
+- ✅ **Modularidad** - Código organizado en paquetes reutilizables
+- ✅ **Escalabilidad** - Fácil agregar nuevas funcionalidades
+- ✅ **Testability** - Funciones puras y desacopladas
 
 ---
 
-## 🛠️ Tecnologías Utilizadas
+## 📊 Formato de Datos
 
-| Tecnología                               | Propósito                          |
-| ---------------------------------------- | ---------------------------------- |
-| **Python 3.12+**                         | Lenguaje principal                 |
-| **Streamlit**                            | Framework web interactivo          |
-| **Google Gemini (gemini-2.0-flash-exp)** | Modelo de IA para el chatbot       |
-| **Pandas**                               | Manipulación y análisis de datos   |
-| **Plotly**                               | Gráficos interactivos modernos     |
-| **Matplotlib**                           | Gráficos de tendencias             |
-| **CSV**                                  | Formato de almacenamiento de datos |
+### Estructura del CSV
 
----
-
-## 🚀 Guía de Instalación
-
-### 1️⃣ Clonar el Repositorio
-
-```bash
-git clone https://github.com/tu-usuario/finance_tracker.git
-cd finance_tracker
-```
-
-### 2️⃣ Crear Entorno Virtual (Recomendado)
-
-**En macOS/Linux:**
-
-```bash
-python3 -m venv venv
-source venv/bin/activate
-```
-
-**En Windows:**
-
-```bash
-python -m venv venv
-venv\Scripts\activate
-```
-
-### 3️⃣ Instalar Dependencias
-
-```bash
-pip install -r requirements.txt
-```
-
-**Dependencias incluidas:**
-
-- `streamlit` - Framework web
-- `pandas` - Análisis de datos
-- `google-generativeai` - API de Google Gemini
-- `matplotlib` - Gráficos
-- `plotly` - Visualizaciones interactivas
-
-### 4️⃣ Configurar API Key de Google Gemini
-
-#### a) Obtener la API Key
-
-1. Ve a [Google AI Studio](https://aistudio.google.com/app/apikey)
-2. Inicia sesión con tu cuenta de Google
-3. Crea una nueva API Key
-4. Copia la clave generada
-
-#### b) Configurar en el proyecto
-
-1. Crea la carpeta de configuración:
-
-   ```bash
-   mkdir .streamlit
-   ```
-
-2. Crea el archivo de secrets:
-
-   ```bash
-   touch .streamlit/secrets.toml
-   ```
-
-3. Agrega tu API Key:
-   ```toml
-   # .streamlit/secrets.toml
-   GEMINI_API_KEY = "TU_API_KEY_AQUÍ"
-   ```
-
-⚠️ **Importante**: Este archivo está en `.gitignore` y NO se subirá a Git por seguridad.
-
----
-
-## 💻 Uso
-
-### 🌐 Opción 1: Aplicación Web (Recomendada)
-
-La interfaz web ofrece la experiencia completa con todas las funcionalidades:
-
-```bash
-streamlit run app.py
-```
-
-Esto abrirá automáticamente tu navegador en `http://localhost:8501`
-
-**Funcionalidades disponibles:**
-
-- ✅ Dashboard con métricas en tiempo real
-- ✅ Registro de transacciones con formulario
-- ✅ Filtros por fecha
-- ✅ Gráficos interactivos con Plotly
-- ✅ Chatbot conversacional con IA
-- ✅ Comandos rápidos
-
-### 🖥️ Opción 2: Línea de Comandos (CLI)
-
-Para usuarios avanzados o uso rápido desde terminal:
-
-```bash
-python main.py
-```
-
-o
-
-```bash
-python version_cli.py
-```
-
-**Funcionalidades CLI:**
-
-- Registrar transacciones
-- Ver resumen financiero
-- Filtrar por fechas
-- Visualizar gráficos en ventana emergente
-
----
-
-## 📖 Guía de Uso del Chatbot
-
-### Comandos Rápidos
-
-| Comando     | Descripción                           | Ejemplo de respuesta                                        |
-| ----------- | ------------------------------------- | ----------------------------------------------------------- |
-| `/resumen`  | Resumen general de todas tus finanzas | Muestra ingresos, egresos, balance y total de transacciones |
-| `/mes`      | Análisis del mes actual               | Métricas del mes en curso                                   |
-| `/semana`   | Resumen de los últimos 7 días         | Actividad financiera reciente                               |
-| `/analisis` | Análisis detallado con IA             | Insights, tendencias y recomendaciones                      |
-| `/ayuda`    | Lista de comandos disponibles         | Guía completa de comandos                                   |
-
-### Preguntas en Lenguaje Natural
-
-El chatbot entiende preguntas como:
-
-- "¿Cuál es mi balance actual?"
-- "¿Cuánto gasté la semana pasada?"
-- "¿En qué categoría gasto más?"
-- "Analiza mis finanzas del último mes"
-- "¿Tengo gastos altos recientes?"
-- "¿Cuánto he ahorrado este año?"
-
-### Características del Chatbot
-
-- 🧠 **Memoria conversacional**: Recuerda las últimas 4 interacciones
-- 📊 **Análisis contextual**: Accede a tus datos financieros en tiempo real
-- 💡 **Recomendaciones**: Detecta patrones y sugiere mejoras
-- 🔒 **Privado**: Tus datos nunca salen de tu máquina (excepto el análisis con IA)
-
----
-
-## 📂 Estructura de Datos
-
-### Formato del CSV
-
-El archivo `finanzas_personales.csv` se genera automáticamente con esta estructura:
+El archivo `finanzas_personales.csv` se genera automáticamente:
 
 | Campo         | Tipo   | Descripción             | Ejemplo         |
 | ------------- | ------ | ----------------------- | --------------- |
@@ -266,46 +321,35 @@ fecha,cantidad,categoria,descripcion
 
 ---
 
-## 🎨 Capturas de Pantalla
+## 🗺️ Roadmap
 
-### Dashboard Principal
+### ✅ Versión 1.0 (Actual)
 
-Visualiza tu situación financiera completa con métricas interactivas y gráficos modernos.
+- [x] Dashboard con métricas en tiempo real
+- [x] Chatbot conversacional con Gemini
+- [x] Comandos rápidos (/resumen, /mes, /semana)
+- [x] Gráficos interactivos con Plotly
+- [x] Filtros por fecha
+- [x] Arquitectura multi-página
+- [x] Gráficos de tendencia temporal
 
-### Chatbot con IA
+### 🚧 Versión 2.0 (Próximamente)
 
-Interactúa con AdamBot para obtener análisis inteligentes de tus finanzas.
+- [ ] Editar y eliminar transacciones
+- [ ] Categorías personalizables (subcategorías)
+- [ ] Migración a SQLite
+- [ ] Exportar reportes a PDF
+- [ ] Gráficos de comparación mensual
+- [ ] Búsqueda avanzada de transacciones
 
-### Filtros de Transacciones
+### 🔮 Versión 3.0 (Futuro)
 
-Analiza períodos específicos con gráficos de tendencia temporal.
-
----
-
-## 🔧 Configuración Avanzada
-
-### Personalizar el tema de Streamlit
-
-Edita `.streamlit/config.toml`:
-
-```toml
-[theme]
-primaryColor = "#FF6B6B"
-backgroundColor = "#1C1C1E"
-secondaryBackgroundColor = "#2C2C2E"
-textColor = "#FFFFFF"
-font = "sans serif"
-```
-
-### Cambiar el modelo de IA
-
-En `chatbot/chatbot_gemini.py`, cambia el modelo:
-
-```python
-model = genai.GenerativeModel("gemini-1.5-pro")  # Más potente pero más lento
-# o
-model = genai.GenerativeModel("gemini-1.5-flash")  # Más rápido
-```
+- [ ] Autenticación multi-usuario
+- [ ] Sincronización en la nube
+- [ ] Metas de ahorro y presupuestos
+- [ ] Notificaciones automáticas
+- [ ] App móvil (PWA)
+- [ ] Integración con APIs bancarias
 
 ---
 
@@ -319,109 +363,202 @@ pip install -r requirements.txt
 
 ### Error: "Invalid API Key"
 
-Verifica que tu API Key esté correctamente configurada en `.streamlit/secrets.toml`
+1. Verifica que tu API Key esté en `.streamlit/secrets.toml`
+2. Asegúrate de que el formato sea: `GEMINI_API_KEY = "tu_key"`
+3. Reinicia la aplicación
 
 ### El chatbot no responde
 
 1. Verifica tu conexión a internet
-2. Asegúrate de tener créditos en tu cuenta de Google AI
-3. Revisa que el modelo esté disponible
+2. Revisa que tengas créditos en tu cuenta de Google AI
+3. Asegúrate de que el modelo esté disponible
 
-### CSV corrupto
-
-Si el archivo CSV se corrompe, simplemente elimínalo:
+### CSV corrupto o errores de datos
 
 ```bash
+# Eliminar el CSV y empezar de nuevo
 rm finanzas_personales.csv
+# Se creará uno nuevo al iniciar la app
 ```
 
-Se creará uno nuevo automáticamente al iniciar la app.
+### Error: "st.set_page_config must be the first Streamlit command"
+
+Este error es conocido y está documentado. La app funciona correctamente a pesar de la advertencia.
 
 ---
 
-## 🚀 Próximas Funcionalidades
-
-- [ ] Migración a base de datos SQLite
-- [ ] Editar y eliminar transacciones
-- [ ] Categorías personalizables
-- [ ] Exportar reportes a PDF
-- [ ] Gráficos de comparación mensual
-- [ ] Metas de ahorro
-- [ ] Notificaciones automáticas
-- [ ] Modo oscuro/claro
-- [ ] Autenticación multi-usuario
-- [ ] Sincronización en la nube
-
----
-
-## 📝 Notas de Desarrollo
-
-### Principios de Arquitectura
-
-Este proyecto sigue principios de **Clean Architecture**:
-
-- **Separación de responsabilidades**: Cada módulo tiene un propósito único
-- **Modularidad**: Código organizado en paquetes reutilizables
-- **Escalabilidad**: Fácil agregar nuevas funcionalidades
-- **Testability**: Funciones puras y desacopladas
-
-### Mejores Prácticas Implementadas
-
-- ✅ Arquitectura multi-página con `st.navigation`
-- ✅ Separación de UI, lógica y datos
-- ✅ Paquetes Python bien estructurados
-- ✅ Imports claros y explícitos
-- ✅ Código DRY (Don't Repeat Yourself)
-- ✅ Manejo de errores robusto
-
----
-
-## 🤝 Contribuciones
+## 🤝 Contribuir
 
 ¡Las contribuciones son bienvenidas! Si quieres mejorar este proyecto:
 
-1. Fork el repositorio
-2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
-3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
-4. Push a la rama (`git push origin feature/AmazingFeature`)
-5. Abre un Pull Request
+### Cómo Contribuir
+
+1. **Fork** el repositorio
+2. **Crea** una rama para tu feature:
+   ```bash
+   git checkout -b feature/AmazingFeature
+   ```
+3. **Commit** tus cambios:
+   ```bash
+   git commit -m 'Add some AmazingFeature'
+   ```
+4. **Push** a la rama:
+   ```bash
+   git push origin feature/AmazingFeature
+   ```
+5. **Abre** un Pull Request
+
+### Áreas de Contribución
+
+- 🐛 Reportar bugs
+- ✨ Proponer nuevas features
+- 📝 Mejorar documentación
+- 🎨 Mejorar UI/UX
+- 🧪 Agregar tests
+- 🌍 Traducciones
+
+---
+
+## 📊 Stats del Proyecto
+
+- 🏗️ **Arquitectura**: Multi-página modular con Streamlit
+- 📦 **Módulos**: 15+ archivos organizados
+- 🤖 **IA**: Google Gemini 2.0 Flash
+- 📈 **Gráficos**: Plotly + Matplotlib
+- 🔧 **Código**: Clean Architecture
+- ⚡ **Performance**: Optimizado y rápido
+- 🎯 **Líneas de código**: ~2,000+
+
+---
+
+## 🎓 Ideal para Aprender
+
+Este proyecto es perfecto si estás aprendiendo:
+
+- ✅ **Python avanzado** - POO, módulos, paquetes
+- ✅ **Streamlit** - Framework web moderno
+- ✅ **Integración con APIs de IA** - Google Gemini
+- ✅ **Manipulación de datos** - Pandas
+- ✅ **Visualizaciones interactivas** - Plotly, Matplotlib
+- ✅ **Arquitectura de software** - Clean Architecture
+- ✅ **Git y control de versiones** - Workflow profesional
+- ✅ **Documentación** - README, comentarios, docstrings
+
+---
+
+## 🔧 Configuración Avanzada
+
+### Personalizar el Tema de Streamlit
+
+Edita `.streamlit/config.toml`:
+
+```toml
+[theme]
+primaryColor = "#FF6B6B"
+backgroundColor = "#1C1C1E"
+secondaryBackgroundColor = "#2C2C2E"
+textColor = "#FFFFFF"
+font = "sans serif"
+
+[server]
+headless = true
+port = 8501
+```
+
+### Cambiar el Modelo de IA
+
+En `chatbot/chatbot_gemini.py`:
+
+```python
+# Para más precisión (más lento y costoso)
+model = genai.GenerativeModel("gemini-1.5-pro")
+
+# Para velocidad (recomendado)
+model = genai.GenerativeModel("gemini-1.5-flash")
+
+# Experimental (más nuevo)
+model = genai.GenerativeModel("gemini-2.0-flash-exp")
+```
+
+---
+
+## 📞 Contacto y Soporte
+
+**Jose Castro**
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/josé-castro-b600791a4/)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/tu-usuario)
+
+### ¿Necesitas ayuda?
+
+- 📧 Abre un [Issue](https://github.com/tu-usuario/finance_tracker/issues)
+- 💬 Contacta por LinkedIn
+- 📖 Lee la [documentación completa](./README.md)
 
 ---
 
 ## 📄 Licencia
 
-Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
+Este proyecto está bajo la Licencia MIT. Ver el archivo [LICENSE](LICENSE) para más detalles.
 
----
+```
+MIT License
 
-## 👤 Autor
+Copyright (c) 2025 Jose Castro
 
-**Jose Castro**
-
-- LinkedIn: [José Castro](https://www.linkedin.com/in/josé-castro-b600791a4/)
-- GitHub: [@ajcastrob](https://github.com/ajcastrob)
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction...
+```
 
 ---
 
 ## 🙏 Agradecimientos
 
-- [Streamlit](https://streamlit.io/) - Por el increíble framework web
-- [Google AI](https://ai.google.dev/) - Por la API de Gemini
-- [Plotly](https://plotly.com/) - Por las visualizaciones interactivas
+Un agradecimiento especial a:
+
+- [Streamlit](https://streamlit.io/) - Por el increíble framework web interactivo
+- [Google AI](https://ai.google.dev/) - Por la API de Gemini y el modelo de IA
+- [Plotly](https://plotly.com/) - Por las visualizaciones interactivas hermosas
+- [Pandas](https://pandas.pydata.org/) - Por la manipulación de datos eficiente
+- La comunidad open source 💚 - Por inspiración y recursos
 
 ---
 
-## 📞 Soporte
+## ⭐ Soporte al Proyecto
 
-¿Tienes preguntas o problemas?
+Si este proyecto te fue útil, considera:
 
-- 📧 Abre un [Issue](https://github.com/tu-usuario/finance_tracker/issues)
-- 💬 Contacta en LinkedIn
+- ⭐ **Darle una estrella** en GitHub
+- 🐛 **Reportar bugs** abriendo un issue
+- 💡 **Sugerir features** en discussions
+- 🤝 **Contribuir** con pull requests
+- 📢 **Compartir** con otros desarrolladores
+- ☕ **Invitarme un café** (opcional)
 
 ---
 
-**⭐ Si este proyecto te fue útil, considera darle una estrella en GitHub!**
+## 📈 Métricas del Repositorio
+
+![GitHub stars](https://img.shields.io/github/stars/tu-usuario/finance_tracker?style=social)
+![GitHub forks](https://img.shields.io/github/forks/tu-usuario/finance_tracker?style=social)
+![GitHub issues](https://img.shields.io/github/issues/tu-usuario/finance_tracker)
+![GitHub license](https://img.shields.io/github/license/tu-usuario/finance_tracker)
 
 ---
+
+<div align="center">
+
+## 🚀 ¡Comienza Ahora!
+
+**[📥 Descargar](https://github.com/tu-usuario/finance_tracker/archive/refs/heads/main.zip) • [📖 Documentación](./README.md) • [🐛 Reportar Bug](https://github.com/tu-usuario/finance_tracker/issues) • [💡 Sugerir Feature](https://github.com/tu-usuario/finance_tracker/issues)**
+
+---
+
+### Hecho con ❤️ y ☕ por [Jose Castro](https://www.linkedin.com/in/josé-castro-b600791a4/)
+
+**⭐ Si te gusta el proyecto, considera darle una estrella ⭐**
 
 _Última actualización: Enero 2025_
+
+</div>
