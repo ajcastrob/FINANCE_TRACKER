@@ -13,7 +13,7 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 # Constantes.
-IMAGEN_LOGO = "assets/logo.png"
+IMAGEN_LOGO = "./assets/logo.png"
 st.image(IMAGEN_LOGO, width=80)
 
 st.logo(IMAGEN_LOGO, size="large")
@@ -33,6 +33,13 @@ st.sidebar.page_link(
     "https://github.com/ajcastrob/finance_tracker?tab=readme-ov-file",
     label="Repositorio Github",
     icon="🛠️",
+)
+
+st.sidebar.divider()
+st.sidebar.markdown(
+    """
+Hecho con ❤️ por José A. Castro 
+"""
 )
 
 
