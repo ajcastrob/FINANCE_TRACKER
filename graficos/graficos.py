@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import pandas as pd
+import streamlit as st
 
 
 def crear_grafico(ingresos, egresos, ahorros):
@@ -17,7 +18,7 @@ def crear_grafico(ingresos, egresos, ahorros):
             labels=etiquetas,
             autopct="%1.1f%%",
             colors=colores,
-            textprops={"color": "white"},
+            textprops={"color": "white", "size": "smaller"},
             shadow=True,
             startangle=90,
         )
@@ -37,7 +38,7 @@ def crear_grafico(ingresos, egresos, ahorros):
             labels=etiquetas,
             autopct="%1.1f%%",
             colors=colores,
-            textprops={"color": "white"},
+            textprops={"color": "white", "size": "smaller"},
             shadow=True,
             startangle=90,
         )

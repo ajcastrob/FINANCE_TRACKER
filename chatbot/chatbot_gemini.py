@@ -7,6 +7,18 @@ from chatbot.contexto import obtener_contexto_financiero
 genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
 
 
+# Función para llamar al modelo de Gemini
+@st.cache_resource
+def cargar_modelo_gemini():
+    """Carga el módelo de gemini y aprovecha el cacheo para no gastar más llamadas"""
+    return genai.GenerativeModel(
+        "gemini-2.5-flash",
+        generation_config={
+            "temperature": 0.7,
+        },
+    )
+
+
 def generar_respuesta_gemini(
     pregunta_usuario: str, datos_df: pd.DataFrame, historial_conversacion: list = None
 ) -> str:
@@ -79,12 +91,8 @@ def generar_respuesta_gemini(
             {pregunta_usuario}
             TU RESPUESTA (recuerda: espacios claros entre palabras):"""
 
-        model = genai.GenerativeModel(
-            "gemini-2.5-flash",
-            generation_config={
-                "temperature": 0.7,
-            },
-        )
+        # Cargar el módelo de Gemini llamando a la función
+        model = cargar_modelo_gemini()
 
         # Crear una sesión con el historial del chat
         chat = model.start_chat(history=historial_gemini)

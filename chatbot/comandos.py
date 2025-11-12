@@ -2,6 +2,8 @@ import pandas as pd
 from datetime import datetime, timedelta
 from chatbot.chatbot_analisis import analizar_finanzas_proactivo
 from chatbot.contexto import obtener_contexto_financiero
+import streamlit as st
+
 
 
 def procesar_comando_rapido(comando: str, datos_df: pd.DataFrame) -> str:
