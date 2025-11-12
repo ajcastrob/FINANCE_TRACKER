@@ -1,6 +1,5 @@
 import matplotlib.pyplot as plt
 import pandas as pd
-import streamlit as st
 
 
 def crear_grafico(ingresos, egresos, ahorros):
@@ -12,6 +11,7 @@ def crear_grafico(ingresos, egresos, ahorros):
     if ahorros > 0:
 
         fig, ax = plt.subplots()  # Creamos la figura y los ejes.
+        fig.set_facecolor("#1C1C1E")
         ax.pie(
             sizes,
             explode=explode,
@@ -23,7 +23,6 @@ def crear_grafico(ingresos, egresos, ahorros):
             startangle=90,
         )
         ax.axis("equal")
-        fig.set_facecolor("#1C1C1E")
         return fig
     else:
         etiquetas = ["Ingresos", "Egresos"]

@@ -1,4 +1,5 @@
 import streamlit as st
+from pages.load_csv import pag0
 from pages.resumen import pag1
 from pages.trasaccion import pag2
 from pages.filtro import pag3
@@ -37,8 +38,9 @@ st.sidebar.page_link(
 
 pg = st.navigation(
     {
+        "Bienvenida": [st.Page(pag0, title="Subir CSV", icon="📓")],
         "Menú": [
-            st.Page(pag1, title="Resumen financiero", icon="🏠"),
+            st.Page(pag1, title="Resumen financiero", icon="🧮"),
             st.Page(pag2, title="Registrar transacción", icon="📪"),
             st.Page(pag3, title="Filtrar transacción", icon="📅"),
         ],

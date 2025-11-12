@@ -7,7 +7,7 @@ from chatbot.contexto import obtener_contexto_financiero
 genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
 
 
-# Función para llamar al modelo de Gemini
+# Función para llamar al modelo de Gemini. Usar el cache de streamlit para no llamarla con cada corrida.
 @st.cache_resource
 def cargar_modelo_gemini():
     """Carga el módelo de gemini y aprovecha el cacheo para no gastar más llamadas"""
@@ -52,8 +52,8 @@ def generar_respuesta_gemini(
         historial_gemini = []
         if historial_conversacion:
             for msg in historial_conversacion[
-                -4:
-            ]:  # Solo los últimos cuatro para no exceder límites
+                -6:
+            ]:  # Solo los últimos seis para no exceder límites
                 rol = "user" if msg["role"] == "user" else "model"
                 historial_gemini.append({"role": rol, "parts": [msg["content"]]})
 
@@ -80,7 +80,7 @@ def generar_respuesta_gemini(
             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
                     INSTRUCCIONES IMPORTANTES:
             1. Responde basándote ÚNICAMENTE en los datos proporcionados arriba
-            2. Mantén tus respuestas concisas: máximo 100 palabras
+            2. Mantén tus respuestas concisas: máximo 250 palabras
             3. Usa espacios correctos entre TODAS las palabras y números
             4. Formatea cantidades monetarias como: "$ 1,234.56" (siempre con espacio después del $)
             5. Usa emojis con moderación para hacer la conversación amigable
@@ -89,7 +89,7 @@ def generar_respuesta_gemini(
 
             PREGUNTA DEL USUARIO:
             {pregunta_usuario}
-            TU RESPUESTA (recuerda: espacios claros entre palabras):"""
+            TU RESPUESTA (recuerda: espacios claros entre palabras.):"""
 
         # Cargar el módelo de Gemini llamando a la función
         model = cargar_modelo_gemini()
