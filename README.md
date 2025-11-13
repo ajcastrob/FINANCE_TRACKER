@@ -559,6 +559,6 @@ Si este proyecto te fue útil, considera:
 
 **⭐ Si te gusta el proyecto, considera darle una estrella ⭐**
 
-_Última actualización: Enero 2025_
+_Última actualización: NOVIEMBRE 2025_
 
 </div>
